@@ -11,10 +11,32 @@ fi
 
 # Define dotfiles directory
 DOTFILES_DIR="$(pwd)"
+CONFIG_DIR="$TEMP_HOME/.config"
+
+mkdir -p "$CONFIG_DIR"
+
 
 # Logging setup
 LOGFILE="$TEMP_HOME/setup.log"
 exec > >(tee -i "$LOGFILE") 2>&1
+
+# Copy all directories and files from .config in dotfiles to the actual system's .config directory
+for config_item in "$DOTFILES_DIR/.config"/*; do
+    if [ -d "$config_item" ]; then
+        # If it's a directory, copy the directory recursively
+        folder_name=$(basename "$config_item")
+        target_dir="$CONFIG_DIR/$folder_name"
+        mkdir -p "$target_dir"
+        echo "Copying directory $folder_name to $target_dir"
+        cp -r "$config_item/"* "$target_dir/"
+    elif [ -f "$config_item" ]; then
+        # If it's a file, copy it directly
+        file_name=$(basename "$config_item")
+        target_file="$CONFIG_DIR/$file_name"
+        echo "Copying file $file_name to $target_file"
+        cp "$config_item" "$target_file"
+    fi
+done
 
 # Backup existing configuration files in the appropriate directory
 for file in .bashrc .gitconfig; do
