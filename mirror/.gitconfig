@@ -1,0 +1,18 @@
+[user]
+	name = Thiago Menezes
+	email = thiagomvas@gmail.com
+	signingkey = 9AC12DC759E425E3
+[credential]
+	helper = store
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[core]
+	autocrlf = input
+[tag]
+	gpgSign = true
+[gui]
+	recentrepo = /home/thiagomv/Src/TMath
+[pull]
+	rebase = true

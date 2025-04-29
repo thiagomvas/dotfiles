@@ -1,0 +1,14 @@
+gamescope-session-plus gamescope-session-steam gamescope-session-common
+discord
+hyperfine
+typescript
+neovim
+postgresql-server
+postgresql-contrib
+docker
+docker-compose
+sqlite3
+httpie
+cmake
+vlc
+gnome-multi-writer
