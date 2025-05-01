@@ -43,7 +43,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][124][Applets][126][Configuration]
-popupHeight=400
+PreloadWeight=60
+popupHeight=450
 popupWidth=560
 
 [Containments][124][Applets][127]
@@ -79,13 +80,13 @@ immutability=1
 plugin=org.kde.plasma.nobara.showdesktop
 
 [Containments][124][General]
-AppletOrder=148;149;146;127;147;128
+AppletOrder=148;149;146;127;147;128;126
 
 [Containments][129]
 activityId=
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
 popupHeight=432
@@ -155,9 +156,22 @@ plugin=org.kde.plasma.networkmanagement
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][129][Applets][144][Configuration]
+PreloadWeight=18
+
 [Containments][129][Applets][145]
 immutability=1
 plugin=org.kde.plasma.battery
+
+[Containments][129][Applets][145][Configuration]
+PreloadWeight=23
+
+[Containments][129][Applets][185]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][129][Applets][185][Configuration]
+PreloadWeight=0
 
 [Containments][129][General]
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
@@ -178,14 +192,20 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][153][Applets][155][Configuration]
-popupHeight=400
+PreloadWeight=60
+popupHeight=450
 popupWidth=560
+
+[Containments][153][Applets][155][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][153][Applets][156]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][153][Applets][156][Configuration]
+PreloadWeight=75
 SystrayContainmentId=157
 
 [Containments][153][Applets][174]
@@ -199,6 +219,11 @@ plugin=org.kde.plasma.panelspacer
 [Containments][153][Applets][176]
 immutability=1
 plugin=org.kde.milou
+
+[Containments][153][Applets][176][Configuration]
+PreloadWeight=55
+popupHeight=37
+popupWidth=630
 
 [Containments][153][Applets][177]
 immutability=1
@@ -254,6 +279,9 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][157][Applets][166][Configuration]
+PreloadWeight=55
+
 [Containments][157][Applets][167]
 immutability=1
 plugin=org.kde.plasma.printmanager
@@ -273,6 +301,9 @@ migrated=true
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][157][Applets][170][Configuration]
+PreloadWeight=60
+
 [Containments][157][Applets][171]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
@@ -281,88 +312,29 @@ plugin=org.kde.plasma.networkmanagement
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][157][Applets][172][Configuration]
+PreloadWeight=18
+
 [Containments][157][Applets][173]
 immutability=1
 plugin=org.kde.plasma.battery
+
+[Containments][157][Applets][173][Configuration]
+PreloadWeight=18
+
+[Containments][157][Applets][184]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][157][Applets][184][Configuration]
+PreloadWeight=0
 
 [Containments][157][General]
 extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
 scaleIconsToFit=true
 
-[Containments][179]
-activityId=
-formfactor=2
-immutability=1
-lastScreen=1
-location=4
-plugin=org.kde.panel
-wallpaperplugin=org.kde.image
-
-[Containments][179][Applets][180]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][179][Applets][180][Configuration]
-PreloadWeight=100
-popupHeight=545
-popupWidth=711
-
-[Containments][179][Applets][180][Configuration][General]
-favoritesPortedToKAstats=true
-icon=nobara-app-menu-icon
-
-[Containments][179][Applets][180][Configuration][Shortcuts]
-global=Alt+F1
-
-[Containments][179][Applets][181]
-immutability=1
-plugin=org.kde.plasma.icontasks
-
-[Containments][179][Applets][181][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][179][Applets][181][Configuration][General]
-launchers=applications:nobara-updater.desktop,applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:com.spotify.Client.desktop,applications:discord.desktop
-
-[Containments][179][Applets][182]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
-
-[Containments][179][Applets][183]
-immutability=1
-plugin=com.kde.plasma.nobara.runcommand
-
-[Containments][179][General]
-AppletOrder=180;181;182;183
-
-[Containments][2]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=4d0b9e07-97e8-4626-b58f-e9809897c8ea
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
-
-[Containments][2][ConfigDialog]
-DialogHeight=836
-DialogWidth=1536
-
-[Containments][2][General]
-positions={"1920x1080":[]}
-
-[Containments][2][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
-VideoUrls=[{"filename":"file:///home/thiagomv/Pictures/steamwintersale.webm","enabled":true,"duration":0,"customDuration":0}]
-
-[Containments][2][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/nobara-41-1.png
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][3]
+[Containments][188]
 activityId=
 formfactor=2
 immutability=1
@@ -371,43 +343,68 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][3][Applets][4]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][3][Applets][4][Configuration]
-PreloadWeight=100
-popupHeight=545
-popupWidth=711
-
-[Containments][3][Applets][4][Configuration][General]
-favoritesPortedToKAstats=true
-icon=nobara-app-menu-icon
-
-[Containments][3][Applets][4][Configuration][Shortcuts]
-global=Alt+F1
-
-[Containments][3][Applets][6]
+[Containments][188][Applets][190]
 immutability=1
 plugin=org.kde.plasma.icontasks
 
-[Containments][3][Applets][6][Configuration][ConfigDialog]
+[Containments][188][Applets][190][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][3][Applets][6][Configuration][General]
+[Containments][188][Applets][190][Configuration][General]
 launchers=applications:nobara-updater.desktop,applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:com.spotify.Client.desktop,applications:discord.desktop
 
-[Containments][3][Applets][7]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
+[Containments][188][General]
+AppletOrder=190
 
-[Containments][3][Applets][8]
+[Containments][195]
+activityId=
+formfactor=2
 immutability=1
-plugin=com.kde.plasma.nobara.runcommand
+lastScreen=1
+location=4
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
 
-[Containments][3][General]
-AppletOrder=4;6;7;8
+[Containments][195][Applets][196]
+immutability=1
+plugin=org.kde.plasma.icontasks
+
+[Containments][195][Applets][196][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][195][Applets][196][Configuration][General]
+launchers=applications:nobara-updater.desktop,applications:systemsettings.desktop,preferred://filemanager,preferred://browser,applications:com.spotify.Client.desktop,applications:discord.desktop
+
+[Containments][195][General]
+AppletOrder=196
+
+[Containments][197]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
+activityId=4d0b9e07-97e8-4626-b58f-e9809897c8ea
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=luisbocanegra.smart.video.wallpaper.reborn
+
+[Containments][197][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][197][General]
+positions={"1920x1080":[]}
+
+[Containments][197][Wallpaper][luisbocanegra.smart.video.wallpaper.reborn][General]
+BackgroundColor=#ff8989
+VideoUrls=[{"filename":"file:///home/thiagomv/Pictures/steamwintersale.webm","enabled":false,"duration":0,"customDuration":0},{"filename":"file:///home/thiagomv/Pictures/steamautumnsale.webm","enabled":true,"duration":0,"customDuration":0},{"filename":"file:///home/thiagomv/Pictures/steamwintersale2.webm","enabled":false,"duration":0,"customDuration":0}]
+
+[Containments][197][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/nobara-41-1.png
+SlidePaths=/usr/share/wallpapers/
 
 [Containments2Appletsts][85][Configuration][Appearance]
 dateFormat=longDate
