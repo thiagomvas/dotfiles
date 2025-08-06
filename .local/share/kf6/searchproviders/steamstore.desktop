@@ -1,0 +1,7 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=steam,steamstore,ss
+Name=Steam Store
+Query=https://store.steampowered.com/search/?term=\\{@}
+Type=Service

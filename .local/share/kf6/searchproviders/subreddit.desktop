@@ -1,0 +1,7 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=r,subreddit
+Name=Subreddit
+Query=https://www.reddit.com/r/\\{@}
+Type=Service

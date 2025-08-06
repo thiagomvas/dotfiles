@@ -1,0 +1,7 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=steammp,smp
+Name=Steam Market
+Query=https://steamcommunity.com/market/search?q=\\{@}
+Type=Service

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=steamhunters,sh
+Name=Steam Hunters
+Query=https://steamhunters.com/games?q=\\{@}
+Type=Service
