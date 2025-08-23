@@ -21,6 +21,8 @@ _local_paths=(
     "$HOME/.dotnet/tools"
 )
 
+export PATH=/usr/lib64/openmpi/bin:$PATH
+
 for dir in "${_local_paths[@]}"; do
     if [ -n "$dir" ] && [ -d "$dir" ] && [[ ":$PATH:" != *":$dir:"* ]]; then
         PATH="$dir:$PATH"
@@ -70,3 +72,7 @@ complete -r cp
 # --- User aliases and functions ---
 alias ll='ls -lah --color=auto'
 alias gs='git status'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

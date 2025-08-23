@@ -75,7 +75,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][124][Applets][128][Applets][133][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][124][Applets][128][Applets][134]
 immutability=1
@@ -188,21 +188,25 @@ plugin=org.kde.plasma.panelspacer
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
-[Containments][124][Applets][148]
-immutability=1
-plugin=org.kde.milou
-
-[Containments][124][Applets][148][Configuration]
-PreloadWeight=55
-popupHeight=37
-popupWidth=630
-
 [Containments][124][Applets][149]
 immutability=1
 plugin=org.kde.plasma.nobara.showdesktop
 
+[Containments][124][Applets][200]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][124][Applets][200][Configuration]
+PreloadWeight=100
+popupHeight=542
+popupWidth=703
+
+[Containments][124][Applets][200][Configuration][General]
+favoritesPortedToKAstats=true
+icon=nobara-app-menu-icon
+
 [Containments][124][General]
-AppletOrder=148;149;146;127;147;128
+AppletOrder=200;149;146;127;147;128
 
 [Containments][153]
 activityId=
@@ -254,7 +258,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][153][Applets][156][Applets][161][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][153][Applets][156][Applets][162]
 immutability=1

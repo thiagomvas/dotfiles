@@ -48,9 +48,13 @@ if type -q starship
 end
 
 # --- Aliases ---
-alias ll='ls -lah --color=auto'
+alias ll='lsd -lah'
 alias gs='git status'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias editfish='nvim ~/.config/fish/config.fish'
+alias reloadfish='source ~/.config/fish/config.fish'
+alias ls=lsd;
 
 set fish_greeting
 neofetch
+
