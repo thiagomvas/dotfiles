@@ -1,32 +1,45 @@
-# ~/.config/fish/config.fish
+# --- Only run interactive stuff in interactive shells ----------------
+if not status --is-interactive
+    return
+end
 
-# --- Source global definitions ---
-# Fish doesn't source /etc/bashrc; system-wide configs for fish are usually in /etc/fish/config.fish
+# --- Environment: only set variables if the directories exist ---------
+# Java
+if test -d /usr/lib/jvm/java-17-openjdk
+    set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk
+end
 
-# --- User specific environment variables ---
-set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk
-set -x ANDROID_HOME $HOME/Android/Sdk
+# Android SDK
+if test -d $HOME/Android/Sdk
+    set -x ANDROID_HOME $HOME/Android/Sdk
+end
 
-# --- PATH setup ---
-# Fish uses a list for PATH; prepend entries if they exist and are not already present
+# --- PATH setup: prepend if directory exists & not already present -----
+set -l _user_paths \
+    $HOME/.local/bin \
+    $HOME/bin \
+    $HOME/.config/ArchiSteamFarm \
+    $JAVA_HOME/bin \
+    $ANDROID_HOME/tools \
+    $ANDROID_HOME/tools/bin \
+    $ANDROID_HOME/platform-tools \
+    $HOME/.dotnet/tools
 
-for dir in $HOME/.local/bin $HOME/bin $HOME/.config/ArchiSteamFarm $JAVA_HOME/bin $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools $HOME/.dotnet/tools
-    if test -d $dir
-        if not contains $dir $PATH
+for dir in $_user_paths
+    if test -n "$dir" -a -d $dir
+        if not contains -- $dir $PATH
             set -x PATH $dir $PATH
         end
     end
 end
 
-# --- SYSTEMD_PAGER ---
-# No direct equivalent; you can set environment variables similarly if needed
-# set -x SYSTEMD_PAGER ""
+# --- GPG_TTY (helpful for gpg pinentry) -------------------------------
+if not set -q GPG_TTY
+    set -x GPG_TTY (tty)
+end
 
-# --- GPG_TTY ---
-# Fish requires a different approach; you can export env variables similarly:
-set -x GPG_TTY (tty)
-
-# --- Source additional scripts ---
+# --- Source small per-shell snippets (optional) ------------------------
+# Keep personal per-command snippets in ~/.bashrc.d/*.fish (optional)
 if test -d $HOME/.bashrc.d
     for rc in $HOME/.bashrc.d/*.fish
         if test -f $rc
@@ -35,32 +48,61 @@ if test -d $HOME/.bashrc.d
     end
 end
 
-# --- fzf initialization ---
+# --- Function autoloading (recommended) -------------------------------
+# Fish autoloads functions from ~/.config/fish/functions/ automatically.
+# Do NOT manually source every file here — keep functions in that dir.
+# (If you still want to source a single script, do so explicitly.)
+
+# --- fzf key bindings (if installed) ---------------------------------
 if test -f $HOME/.fzf.fish
     source $HOME/.fzf.fish
 else if test -f /usr/share/fzf/key-bindings.fish
     source /usr/share/fzf/key-bindings.fish
 end
 
-# --- Starship prompt ---
+# --- Prompt: starship (idiomatic) ------------------------------------
 if type -q starship
-    starship init fish | source
+    eval (starship init fish)
 end
 
-# --- Aliases ---
-alias ll='lsd -lah'
-alias gs='git status'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias editfish='nvim ~/.config/fish/config.fish'
-alias reloadfish='source ~/.config/fish/config.fish'
+# --- Performance / UI tweaks ------------------------------------------
+# Disable interactive greeting to speed up startup
+set fish_greeting
 
+# --- Aliases & abbreviations (grouped) -------------------------------
+# Core aliases
+alias ll='lsd -lah'
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+# Git + dotfiles
+alias gs='git status'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# Config helpers
+alias editfish='nvim ~/.config/fish/config.fish'
+function reloadfish
+    # syntax-check before reloading
+    if fish -c 'source ~/.config/fish/config.fish' >/dev/null 2>&1
+        source ~/.config/fish/config.fish
+    else
+        echo "Syntax error: config.fish not reloaded." >&2
+    end
+end
+
+# Utilities
 alias show-specs="fastfetch --config ~/.config/fastfetch/minimal.jsonc"
 alias copy-specs="show-specs | wl-copy"
-set fish_greeting
-neofetch
+
+# Useful abbreviations
+abbr -a dl 'cd ~/Downloads'
+abbr -a dc 'cd ~/Documents'
+
+# --- Optional interactive toys (only if installed) --------------------
+if type -q neofetch
+    neofetch
+end
+
