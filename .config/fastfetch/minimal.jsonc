@@ -8,6 +8,10 @@
     },
     "modules": [
         {
+            "type": "host",
+            "key": "PC"
+        },
+        {
             "type": "cpu",
             "key": "CPU"
         },
