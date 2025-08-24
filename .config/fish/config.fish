@@ -53,8 +53,12 @@ alias gs='git status'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias editfish='nvim ~/.config/fish/config.fish'
 alias reloadfish='source ~/.config/fish/config.fish'
-alias ls=lsd;
 
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 set fish_greeting
 neofetch
 
