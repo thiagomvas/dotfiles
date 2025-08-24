@@ -59,6 +59,8 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+
+alias show-specs="fastfetch --config ~/.config/fastfetch/minimal.jsonc"
+alias copy-specs="show-specs | wl-copy"
 set fish_greeting
 neofetch
-
