@@ -3,6 +3,23 @@ if not status --is-interactive
     return
 end
 
+# --- Configuration: set fish variables ------------------------------
+# Set editor if not set yet
+if not set -q EDITOR
+    set -Ux EDITOR nvim
+end
+function set-editor --description 'Set the default editor for fish'
+    if test (count $argv) -eq 1
+        set -e EDITOR          # remove any existing shadow
+        set -Ux EDITOR $argv[1]
+        echo "Editor set to: $EDITOR"
+    else
+        echo "Usage: set-editor <editor-command>"
+    end
+end
+
+
+
 # --- Environment: only set variables if the directories exist ---------
 # Java
 if test -d /usr/lib/jvm/java-17-openjdk
@@ -83,7 +100,7 @@ alias gs='git status'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Config helpers
-alias editfish='nvim ~/.config/fish/config.fish'
+alias editfish='code ~/.config/fish/config.fish'
 function reloadfish
     # syntax-check before reloading
     if fish -c 'source ~/.config/fish/config.fish' >/dev/null 2>&1
@@ -92,6 +109,7 @@ function reloadfish
         echo "Syntax error: config.fish not reloaded." >&2
     end
 end
+
 
 # Utilities
 alias show-specs="fastfetch --config ~/.config/fastfetch/minimal.jsonc"
