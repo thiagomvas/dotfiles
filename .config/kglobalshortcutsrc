@@ -209,11 +209,11 @@ previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.chromium.Chromium]
-B96E961D8B05D69026346A8F709EC0C1-autofill_card=,none,Autofill the last used card for the current website
-B96E961D8B05D69026346A8F709EC0C1-autofill_identity=,none,Autofill the last used identity for the current website
-B96E961D8B05D69026346A8F709EC0C1-autofill_login=,none,Autofill the last used login for the current website
-B96E961D8B05D69026346A8F709EC0C1-generate_password=,none,Generate and copy a new random password to the clipboard
-B96E961D8B05D69026346A8F709EC0C1-lock_vault=,none,Lock the vault
+B96E961D8B05D69026346A8F709EC0C1-autofill_card=none,none,Autofill the last used card for the current website
+B96E961D8B05D69026346A8F709EC0C1-autofill_identity=none,none,Autofill the last used identity for the current website
+B96E961D8B05D69026346A8F709EC0C1-autofill_login=none,none,Autofill the last used login for the current website
+B96E961D8B05D69026346A8F709EC0C1-generate_password=none,none,Generate and copy a new random password to the clipboard
+B96E961D8B05D69026346A8F709EC0C1-lock_vault=none,none,Lock the vault
 _k_friendly_name=org.chromium.Chromium
 
 [org_kde_powerdevil]

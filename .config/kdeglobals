@@ -106,7 +106,7 @@ ForegroundVisited=173,101,175
 
 [DirSelect Dialog]
 DirSelectDialog Size=1920,1052
-History Items[$e]=file:$HOME/.config/fish,file:$HOME/Documents/JetSales/Src/jetgo-front-legacy,file:$HOME/Src/softools,file:$HOME/Documents/JetSales/jet-x/dist,file:$HOME/Src/jetx-extension/dist_chrome,file:$HOME/Src/JetX,file:$HOME/Src
+History Items[$e]=file:$HOME/Src/softools,file:$HOME/.config/fish,file:$HOME/Documents/JetSales/Src/jetgo-front-legacy,file:$HOME/Src/softools,file:$HOME/Documents/JetSales/jet-x/dist,file:$HOME/Src/jetx-extension/dist_chrome,file:$HOME/Src/JetX,file:$HOME/Src
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa4\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
