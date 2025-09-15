@@ -96,12 +96,18 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias cat='bat'
 
+alias dcdev='docker compose -f "docker-compose.dev.yml"'
+alias dcp='docker compose -f "docker-compose.prod.yml"'
+
+alias dstop='docker stop (docker ps -q)'
+alias drm='docker rm (docker ps -a -q)'
+
 # Git + dotfiles
 alias gs='git status'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Config helpers
-alias editfish='code ~/.config/fish/config.fish'
+alias editfish='code ~/.config/fish/'
 function reloadfish
     # syntax-check before reloading
     if fish -c 'source ~/.config/fish/config.fish' >/dev/null 2>&1
