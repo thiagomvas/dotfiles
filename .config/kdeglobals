@@ -110,25 +110,22 @@ History Items[$e]=file:$HOME/Src/softools,file:$HOME/.config/fish,file:$HOME/Doc
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa4\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
-ColorSchemeHash=68cea23be485b93b5c96e9af4c5396ab6eb5fc37
+ColorSchemeHash=7715fd9c409e8efa0516fd38da43c1c19bb12d96
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
 Breadcrumb Navigation=false
 Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Show Bookmarks=false
 Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
 Show hidden files=false
-Sort by=Date
+Sort by=Name
 Sort directories first=true
 Sort hidden files last=false
-Sort reversed=true
+Sort reversed=false
 Speedbar Width=154
 View Style=DetailTree
 

@@ -1,12 +1,13 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-4d0b9e07-97e8-4626-b58f-e9809897c8ea=none,none,Switch to activity "Default"
+switch-to-activity-a7387ec0-7576-46e8-95a3-5629e420532d=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=Ctrl+Shift\\, 2,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Portuguese (Brazil)=Ctrl+Shift\\, 1,none,Switch keyboard layout to Portuguese (Brazil)
-Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
-Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
+Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,
+Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,
 _k_friendly_name=Keyboard Layout Switcher
 
 [kaccess]
@@ -141,7 +142,7 @@ Window One Screen Down=none,,Move Window One Screen Down
 Window One Screen Up=none,,Move Window One Screen Up
 Window One Screen to the Left=none,,Move Window One Screen to the Left
 Window One Screen to the Right=none,,Move Window One Screen to the Right
-Window Operations Menu=Alt+F3,Alt+F3,Window Operations Menu
+Window Operations Menu=Alt+F3,Alt+F3,Window Menu
 Window Pack Down=none,,Move Window Down
 Window Pack Left=none,,Move Window Left
 Window Pack Right=none,,Move Window Right
@@ -156,7 +157,7 @@ Window Quick Tile Top Left=none,,Quick Tile Window to the Top Left
 Window Quick Tile Top Right=none,,Quick Tile Window to the Top Right
 Window Raise=none,,Raise Window
 Window Resize=none,,Resize Window
-Window Shade=none,,Shade Window
+Window Shade=none,none,Shade Window
 Window Shrink Horizontal=none,,Shrink Window Horizontally
 Window Shrink Vertical=none,,Shrink Window Vertically
 Window to Desktop 1=none,,Window to Desktop 1
@@ -214,6 +215,11 @@ B96E961D8B05D69026346A8F709EC0C1-autofill_identity=none,none,Autofill the last u
 B96E961D8B05D69026346A8F709EC0C1-autofill_login=none,none,Autofill the last used login for the current website
 B96E961D8B05D69026346A8F709EC0C1-generate_password=none,none,Generate and copy a new random password to the clipboard
 B96E961D8B05D69026346A8F709EC0C1-lock_vault=none,none,Lock the vault
+DFEA34B600FC5253FDB8E072D488890A-autofill_card=none,none,Autofill the last used card for the current website
+DFEA34B600FC5253FDB8E072D488890A-autofill_identity=none,none,Autofill the last used identity for the current website
+DFEA34B600FC5253FDB8E072D488890A-autofill_login=none,none,Autofill the last used login for the current website
+DFEA34B600FC5253FDB8E072D488890A-generate_password=none,none,Generate and copy a new random password to the clipboard
+DFEA34B600FC5253FDB8E072D488890A-lock_vault=none,none,Lock the vault
 _k_friendly_name=org.chromium.Chromium
 
 [org_kde_powerdevil]
@@ -233,6 +239,7 @@ _k_friendly_name=Power Management
 powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
+Slideshow Wallpaper Next Image=none,none,Next Wallpaper Image
 _k_friendly_name=plasmashell
 activate application launcher=Meta\tAlt+F1,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
@@ -245,6 +252,7 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
+activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 30=none,none,Activate Application Launcher Widget
 activate widget 4=none,none,Activate Application Launcher Widget
 activate widget 97=none,none,Activate Application Launcher Widget

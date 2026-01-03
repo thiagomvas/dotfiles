@@ -122,6 +122,11 @@ end
 alias show-specs="fastfetch --config ~/.config/fastfetch/minimal.jsonc"
 alias copy-specs="show-specs | wl-copy"
 
+alias vpn-on="tailscale up --exit-node=100.109.151.18 --exit-node-allow-lan-access"
+alias vpn-off="tailscale down"
+
+alias cs="csharprepl"
+
 # Useful abbreviations
 abbr -a dl 'cd ~/Downloads'
 abbr -a dc 'cd ~/Documents'
