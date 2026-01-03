@@ -122,7 +122,7 @@ end
 alias show-specs="fastfetch --config ~/.config/fastfetch/minimal.jsonc"
 alias copy-specs="show-specs | wl-copy"
 
-alias vpn-on="tailscale up --exit-node=100.109.151.18 --exit-node-allow-lan-access"
+alias vpn-on="tailscale up --accept-dns=false --exit-node-allow-lan-access --exit-node=100.109.151.18"
 alias vpn-off="tailscale down"
 
 alias cs="csharprepl"
